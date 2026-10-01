@@ -1,0 +1,30 @@
+/* Fonts Declarations - Local & Web */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('../fonts/DS-DIGI.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('../fonts/DS-DIGIB.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('../fonts/DS-DIGII.TTF') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('../fonts/DS-DIGIT.TTF') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

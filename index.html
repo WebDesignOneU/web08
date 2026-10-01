@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web08 - Modern JavaScript Showcase Lab</title>
+  <meta name="description" content="Showcase interactivo de 14 librerías esenciales de JavaScript: Anime.js, Chart.js, Axios, Validator.js, DataTables.js, Leaflet, GSAP, AOS, Day.js, Lodash, Flowbite, D3.js, Phaser.js y Konva.js.">
+  
+  <!-- CSS Vendors -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.css">
+
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/logo.svg" alt="Web08 Logo" height="32" style="vertical-align: middle;">
+      <span>JS Showcase</span>
+      <span class="brand-badge">v1.0</span>
+    </a>
+    <div class="nav-links">
+      <a href="#catalogo" class="nav-link"><i class="ri-apps-2-line"></i> Catálogo</a>
+      <a href="#stats" class="nav-link"><i class="ri-bar-chart-2-line"></i> Estadísticas</a>
+      <a href="README.md" target="_blank" class="nav-link"><i class="ri-book-open-line"></i> Documentación</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" title="Cambiar tema (Claro/Oscuro)">
+        <i class="ri-sun-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-pill">
+      <i class="ri-sparkling-fill"></i> Laboratorio de Librerías JavaScript 2026
+    </div>
+    <h1 class="hero-title">
+      Ecosistema Moderno de <br>
+      <span class="text-gradient">Librerías JavaScript</span>
+    </h1>
+    <p class="hero-desc">
+      Explora, prueba y experimenta con 14 librerías de alto impacto organizadas por nivel de complejidad: animaciones, gráficos, geolocalización, manipulación funcional, componentes UI y motores 2D interactivos.
+    </p>
+
+    <!-- Stats Ribbon -->
+    <div class="stats-grid" id="stats">
+      <div class="stat-card">
+        <span class="stat-value" id="active-count">14</span>
+        <span class="stat-label">Librerías Activas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Niveles de Maestría</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">100%</span>
+        <span class="stat-label">Playgrounds Vivos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Configuración Previa</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTROLS & FILTER BAR -->
+  <section class="controls-bar" id="catalogo">
+    <div class="filter-pills">
+      <button class="filter-btn active" data-level="all">
+        <i class="ri-grid-fill"></i> Todas <span class="filter-count">14</span>
+      </button>
+      <button class="filter-btn" data-level="basico">
+        <i class="ri-seedling-line"></i> Nivel Básico <span class="filter-count">6</span>
+      </button>
+      <button class="filter-btn" data-level="intermedio">
+        <i class="ri-flashlight-line"></i> Nivel Intermedio <span class="filter-count">5</span>
+      </button>
+      <button class="filter-btn" data-level="avanzado">
+        <i class="ri-rocket-line"></i> Nivel Avanzado <span class="filter-count">3</span>
+      </button>
+    </div>
+
+    <div class="search-box">
+      <i class="ri-search-line search-icon"></i>
+      <input type="text" id="search-input" class="search-input" placeholder="Buscar por nombre o concepto..." />
+    </div>
+  </section>
+
+  <!-- SHOWCASE GRID -->
+  <main class="showcase-container" id="showcase-grid">
+
+    <!-- ==========================================
+         NIVEL BÁSICO (6 Librerías)
+         ========================================== -->
+
+    <!-- 1. Anime.js -->
+    <article class="card-lib" data-level="basico" id="card-anime">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Anime.js</h2>
+            <span class="lib-badge badge-basic">Básico</span>
+          </div>
+          <p class="card-desc">Motor ligero de animaciones CSS, SVG y propiedades de objetos con staggering.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="anime" data-name="Anime.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;">
+            <button class="btn-sm btn-primary" id="btn-anime-play"><i class="ri-play-fill"></i> Animar</button>
+            <button class="btn-sm" id="btn-anime-reverse"><i class="ri-refresh-line"></i> Invertir</button>
+            <button class="btn-sm" id="btn-anime-wave"><i class="ri-water-flash-line"></i> Ola</button>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Grid 7x4 Stagger</span>
+        </div>
+        <div class="demo-box">
+          <div class="anime-grid" id="anime-grid"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Chart.js -->
+    <article class="card-lib" data-level="basico" id="card-chart">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Chart.js</h2>
+            <span class="lib-badge badge-basic">Básico</span>
+          </div>
+          <p class="card-desc">Visualización de datos reactiva en HTML5 Canvas con leyendas y transiciones suaves.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="chart" data-name="Chart.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;align-items:center;">
+            <select id="btn-chart-type" class="btn-sm" style="background:#0f172a;outline:none;">
+              <option value="line">Tipo: Línea</option>
+              <option value="bar">Tipo: Barra</option>
+              <option value="radar">Tipo: Radar</option>
+              <option value="doughnut">Tipo: Dona</option>
+            </select>
+            <button class="btn-sm btn-primary" id="btn-chart-random"><i class="ri-shuffle-line"></i> Aleatorio</button>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Dataset reactivo</span>
+        </div>
+        <div class="demo-box" style="padding:0.5rem;">
+          <div class="chart-wrapper">
+            <canvas id="chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Axios -->
+    <article class="card-lib" data-level="basico" id="card-axios">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Axios</h2>
+            <span class="lib-badge badge-basic">Básico</span>
+          </div>
+          <p class="card-desc">Cliente HTTP basado en Promesas con interceptores, timeouts y serialización automática.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="axios" data-name="Axios">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;align-items:center;">
+            <select id="axios-endpoint" class="btn-sm" style="background:#0f172a;outline:none;">
+              <option value="users">GET /assets/sample-data.json</option>
+              <option value="posts">GET /jsonplaceholder/posts (Live)</option>
+              <option value="post_item">POST /jsonplaceholder/posts</option>
+            </select>
+            <button class="btn-sm btn-primary" id="btn-axios-fetch"><i class="ri-send-plane-fill"></i> Petición</button>
+          </div>
+          <span id="axios-latency" style="font-size:0.75rem;color:#38bdf8;font-weight:600;">Listo</span>
+        </div>
+        <div class="demo-box" style="padding:0.5rem;align-items:stretch;">
+          <pre class="axios-console" id="axios-response">// Haz clic en "Petición" para emitir una solicitud HTTP real con Axios...</pre>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Validator.js -->
+    <article class="card-lib" data-level="basico" id="card-validator">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Validator.js</h2>
+            <span class="lib-badge badge-basic">Básico</span>
+          </div>
+          <p class="card-desc">Biblioteca de validadores y saneamiento para cadenas de texto, emails, URLs y contraseñas.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="validator" data-name="Validator.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-box" style="padding:1rem;justify-content:flex-start;align-items:stretch;">
+          <div class="validator-form">
+            <div class="validator-input-group">
+              <input type="text" id="val-email" class="validator-input" value="developer@cloud.tech" placeholder="Validar correo electrónico...">
+              <div id="badge-email" class="validator-badge val-valid"><i class="ri-checkbox-circle-fill"></i> Email válido</div>
+            </div>
+
+            <div class="validator-input-group">
+              <input type="text" id="val-pass" class="validator-input" value="SuperSecret@2026" placeholder="Validar contraseña fuerte...">
+              <div id="badge-pass" class="validator-badge val-valid"><i class="ri-shield-check-fill"></i> Contraseña segura</div>
+            </div>
+
+            <div class="validator-input-group">
+              <input type="text" id="val-url" class="validator-input" value="https://google.com" placeholder="Validar URL...">
+              <div id="badge-url" class="validator-badge val-valid"><i class="ri-checkbox-circle-fill"></i> URL HTTP/HTTPS válida</div>
+            </div>
+
+            <div class="validator-input-group">
+              <input type="text" id="val-sanitize" class="validator-input" value="<script>alert('xss')</script>Texto Limpio" placeholder="Sanitizar HTML...">
+              <div style="font-size:0.72rem;color:var(--text-dim);margin-top:2px;">
+                Sanitizado (escape): <code id="out-sanitize" style="color:#f472b6;"></code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. DataTables.js -->
+    <article class="card-lib" data-level="basico" id="card-datatables">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">DataTables.js</h2>
+            <span class="lib-badge badge-basic">Básico</span>
+          </div>
+          <p class="card-desc">Tablas de datos avanzadas con paginación instantánea, filtros multicampo y renderers.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="datatables" data-name="DataTables.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-box" style="padding:0.75rem;justify-content:flex-start;align-items:stretch;">
+          <div class="dt-wrapper">
+            <table id="sample-datatable" class="display" style="width:100%">
+              <thead>
+                <tr>
+                  <th>Especialista</th>
+                  <th>Rol</th>
+                  <th>Ciudad</th>
+                  <th>Salario</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Leaflet -->
+    <article class="card-lib" data-level="basico" id="card-leaflet">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Leaflet</h2>
+            <span class="lib-badge badge-basic">Básico</span>
+          </div>
+          <p class="card-desc">Mapas interactivos ultraligeros para web y móvil con capas GeoJSON y marcadores SVG.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="leaflet" data-name="Leaflet">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;">
+            <button class="btn-sm btn-primary" id="btn-map-santiago"><i class="ri-focus-3-line"></i> Santiago</button>
+            <button class="btn-sm" id="btn-map-all"><i class="ri-map-pin-range-line"></i> Ver Todos</button>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-dim)">CartoDB DarkMatter Tiles</span>
+        </div>
+        <div class="demo-box" style="padding:0;overflow:hidden;">
+          <div id="leaflet-map"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         NIVEL INTERMEDIO (5 Librerías)
+         ========================================== -->
+
+    <!-- 7. GSAP -->
+    <article class="card-lib" data-level="intermedio" id="card-gsap">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">GSAP</h2>
+            <span class="lib-badge badge-inter">Intermedio</span>
+          </div>
+          <p class="card-desc">GreenSock Animation Platform: estándar de la industria en timelines de alto rendimiento.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="gsap" data-name="GSAP">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;align-items:center;">
+            <button class="btn-sm btn-primary" id="btn-gsap-play"><i class="ri-play-fill"></i> Play</button>
+            <button class="btn-sm" id="btn-gsap-pause"><i class="ri-pause-line"></i> Pausa</button>
+            <button class="btn-sm" id="btn-gsap-reverse"><i class="ri-arrow-left-right-line"></i> Reverse</button>
+            <button class="btn-sm" id="btn-gsap-restart"><i class="ri-restart-line"></i></button>
+          </div>
+          <input type="range" id="gsap-scrubber" min="0" max="1" step="0.01" value="0" style="width:90px;" title="Scrubber de Timeline" />
+        </div>
+        <div class="demo-box">
+          <div class="gsap-stage">
+            <div class="gsap-card">CSS</div>
+            <div class="gsap-card" style="background:linear-gradient(135deg, #06b6d4, #6366f1)">DOM</div>
+            <div class="gsap-card" style="background:linear-gradient(135deg, #f59e0b, #ec4899)">SVG</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8. AOS -->
+    <article class="card-lib" data-level="intermedio" id="card-aos">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">AOS</h2>
+            <span class="lib-badge badge-inter">Intermedio</span>
+          </div>
+          <p class="card-desc">Animate On Scroll: disparador de animaciones según visibilidad en viewport.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="aos" data-name="AOS">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <button class="btn-sm btn-primary" id="btn-aos-reset"><i class="ri-arrow-up-line"></i> Reiniciar Scroll</button>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Haz scroll abajo ↓</span>
+        </div>
+        <div class="demo-box" style="padding:0.5rem;align-items:stretch;">
+          <div class="aos-scroll-area" id="aos-scroll-area">
+            <div class="aos-item" data-aos="fade-up" style="border-left: 3px solid #6366f1;">
+              ⚡ [fade-up] Componente Detectado en Pantalla
+            </div>
+            <div class="aos-item" data-aos="flip-left" style="border-left: 3px solid #06b6d4;">
+              🔄 [flip-left] Rotación 3D en Entrada
+            </div>
+            <div class="aos-item" data-aos="zoom-in" style="border-left: 3px solid #ec4899;">
+              🔍 [zoom-in] Escala Elástica Suave
+            </div>
+            <div class="aos-item" data-aos="slide-right" style="border-left: 3px solid #10b981;">
+              ⏩ [slide-right] Desplazamiento Lateral
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9. Day.js -->
+    <article class="card-lib" data-level="intermedio" id="card-dayjs">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Day.js</h2>
+            <span class="lib-badge badge-inter">Intermedio</span>
+          </div>
+          <p class="card-desc">Alternativa ultraligera (2kB) a Moment.js para parsear, validar y manipular fechas.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="dayjs" data-name="Day.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-box" style="padding:1rem;">
+          <!-- Reloj digital usando la fuente local DS-Digital -->
+          <div class="digital-clock" id="digital-clock-val">00:00:00</div>
+          
+          <div class="dayjs-output-grid">
+            <div class="dayjs-pill">
+              <span class="dayjs-pill-label">Fecha Completa (i18n es):</span>
+              <span class="dayjs-pill-val" id="dayjs-full">...</span>
+            </div>
+            <div class="dayjs-pill">
+              <span class="dayjs-pill-label">Tiempo Relativo Pasado:</span>
+              <span class="dayjs-pill-val" id="dayjs-rel1">...</span>
+            </div>
+            <div class="dayjs-pill">
+              <span class="dayjs-pill-label">Tiempo Relativo Futuro:</span>
+              <span class="dayjs-pill-val" id="dayjs-rel2">...</span>
+            </div>
+            <div class="dayjs-pill">
+              <span class="dayjs-pill-label">Fin de Año (diff):</span>
+              <span class="dayjs-pill-val" id="dayjs-diff">...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Lodash -->
+    <article class="card-lib" data-level="intermedio" id="card-lodash">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Lodash</h2>
+            <span class="lib-badge badge-inter">Intermedio</span>
+          </div>
+          <p class="card-desc">Librería de utilidades funcionales para arreglos, objetos, strings y optimización.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="lodash" data-name="Lodash">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;">
+            <button class="btn-sm btn-primary" id="btn-ld-group">_.groupBy()</button>
+            <button class="btn-sm" id="btn-ld-sort">_.orderBy()</button>
+            <button class="btn-sm" id="btn-ld-chunk">_.chunk()</button>
+          </div>
+        </div>
+        <div class="demo-box" style="padding:0.75rem;align-items:stretch;justify-content:flex-start;">
+          <div style="margin-bottom:0.6rem;">
+            <label style="font-size:0.72rem;color:var(--text-muted);display:block;margin-bottom:2px;">Prueba de _.debounce(400ms):</label>
+            <input type="text" id="lodash-debounce-input" class="validator-input" placeholder="Escribe rápido aquí...">
+            <div style="display:flex;justify-content:space-between;font-size:0.72rem;margin-top:3px;color:var(--text-dim);">
+              <span>Teclas pulsadas: <b id="lodash-raw-counter" style="color:#f472b6;">0</b></span>
+              <span>Ejecuciones debounced: <b id="lodash-debounce-counter" style="color:#34d399;">0</b></span>
+            </div>
+          </div>
+          <pre class="axios-console" id="lodash-output" style="max-height:120px;">// Selecciona una función Lodash para ver la transformación en tiempo real</pre>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. Flowbite -->
+    <article class="card-lib" data-level="intermedio" id="card-flowbite">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Flowbite</h2>
+            <span class="lib-badge badge-inter">Intermedio</span>
+          </div>
+          <p class="card-desc">Biblioteca de componentes UI accesibles y modernos (modales, tabs, acordeones, tooltips).</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="flowbite" data-name="Flowbite">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-box" style="padding:1rem;align-items:stretch;justify-content:flex-start;">
+          <div class="flowbite-demo-area">
+            <!-- Botón Modal Flowbite -->
+            <button id="btn-flowbite-modal" class="btn-sm btn-primary" style="justify-content:center;">
+              <i class="ri-window-line"></i> Disparar Modal Flowbite
+            </button>
+
+            <!-- Tabs Flowbite -->
+            <div class="border-b border-gray-700" style="border-bottom: 1px solid var(--border-color);">
+              <ul class="flex flex-wrap -mb-px text-xs font-medium text-center" style="display:flex;gap:0.75rem;">
+                <li>
+                  <button class="flowbite-tab-btn active text-indigo-400 border-b-2 border-indigo-400 pb-1" data-target="flow-tab-1">Visión General</button>
+                </li>
+                <li>
+                  <button class="flowbite-tab-btn text-gray-400 pb-1" data-target="flow-tab-2">Componentes</button>
+                </li>
+                <li>
+                  <button class="flowbite-tab-btn text-gray-400 pb-1" data-target="flow-tab-3">Diseño</button>
+                </li>
+              </ul>
+            </div>
+            
+            <div id="flow-tab-1" class="flowbite-tab-pane text-xs text-gray-300" style="font-size:0.8rem;color:var(--text-muted);">
+              Flowbite proporciona componentes listos basados en Tailwind y JS vainilla estructurado con soporte de temas oscuros.
+            </div>
+            <div id="flow-tab-2" class="flowbite-tab-pane hidden text-xs text-gray-300" style="font-size:0.8rem;color:var(--text-muted);">
+              Modales interactivos, barras laterales, carruseles, indicadores de progreso y selectores avanzados.
+            </div>
+            <div id="flow-tab-3" class="flowbite-tab-pane hidden text-xs text-gray-300" style="font-size:0.8rem;color:var(--text-muted);">
+              Diseñado con estética Figma, WCAG 2.1 AA compliant y 100% responsivo para cualquier viewport.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================
+         NIVEL AVANZADO (3 Librerías)
+         ========================================== -->
+
+    <!-- 12. D3.js -->
+    <article class="card-lib" data-level="avanzado" id="card-d3">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">D3.js</h2>
+            <span class="lib-badge badge-adv">Avanzado</span>
+          </div>
+          <p class="card-desc">Data-Driven Documents: motor supremo para visualizaciones SVG, matemáticas y simulaciones físicas.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="d3" data-name="D3.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;">
+            <button class="btn-sm btn-primary" id="btn-d3-add"><i class="ri-add-circle-line"></i> Añadir Nodo</button>
+            <button class="btn-sm" id="btn-d3-reset"><i class="ri-restart-line"></i> Reset</button>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Arrastra los nodos con el cursor</span>
+        </div>
+        <div class="demo-box" style="padding:0;overflow:hidden;">
+          <div id="d3-stage"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 13. Phaser.js -->
+    <article class="card-lib" data-level="avanzado" id="card-phaser">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Phaser.js</h2>
+            <span class="lib-badge badge-adv">Avanzado</span>
+          </div>
+          <p class="card-desc">Motor integral para videojuegos 2D para navegador con motor de físicas arcade y audio.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="phaser" data-name="Phaser.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;align-items:center;">
+            <button class="btn-sm btn-primary" id="btn-phaser-reset"><i class="ri-restart-line"></i> Reiniciar Partida</button>
+            <span style="font-size:0.75rem;color:var(--text-muted);">Puntaje: <b id="phaser-score-badge" style="color:#facc15;">0</b></span>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Cyber Gem Collector</span>
+        </div>
+        <div class="demo-box" style="padding:0;overflow:hidden;">
+          <div id="phaser-game-container"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 14. Konva.js -->
+    <article class="card-lib" data-level="avanzado" id="card-konva">
+      <div class="card-header">
+        <div class="card-meta">
+          <div class="card-title-row">
+            <h2 class="card-title">Konva.js</h2>
+            <span class="lib-badge badge-adv">Avanzado</span>
+          </div>
+          <p class="card-desc">Framework 2D Canvas de alto rendimiento con animaciones, manipulación de capas y transformadores.</p>
+        </div>
+        <div class="card-actions">
+          <button class="btn-sm btn-inspect-code" data-lib="konva" data-name="Konva.js">
+            <i class="ri-code-line"></i> Código
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="demo-toolbar">
+          <div style="display:flex;gap:0.4rem;">
+            <button class="btn-sm btn-primary" id="btn-konva-add"><i class="ri-add-line"></i> Figura</button>
+            <button class="btn-sm" id="btn-konva-color"><i class="ri-palette-line"></i> Color</button>
+            <button class="btn-sm" id="btn-konva-export"><i class="ri-download-2-line"></i> PNG</button>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-dim)">Transformer activo</span>
+        </div>
+        <div class="demo-box" style="padding:0;overflow:hidden;">
+          <div id="konva-container"></div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- MODAL FLOWBITE DE DEMOSTRACIÓN -->
+  <div id="flowbite-sample-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-70 flex items-center justify-center p-4">
+    <div class="relative w-full max-w-md bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-6 text-white">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <h3 class="text-lg font-bold flex items-center gap-2">
+          <i class="ri-check-double-line text-emerald-400"></i> Modal Interactivo Flowbite
+        </h3>
+        <button id="btn-flowbite-modal-close" class="text-slate-400 hover:text-white text-xl">✕</button>
+      </div>
+      <div class="py-4 text-sm text-slate-300">
+        <p>Este componente demuestra la interacción reactiva de modales y drawers en aplicaciones web modernas utilizando la arquitectura de Flowbite.</p>
+      </div>
+      <div class="pt-3 border-t border-slate-800 flex justify-end gap-2">
+        <button onclick="document.getElementById('flowbite-sample-modal').classList.add('hidden')" class="btn-sm btn-primary">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CODE INSPECTOR MODAL -->
+  <div class="modal-backdrop" id="code-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-code-title">
+          <i class="ri-code-s-slash-line" style="color:var(--primary)"></i> Inspector de Código
+        </h3>
+        <button class="btn-icon" id="modal-close-btn" style="width:32px;height:32px;">✕</button>
+      </div>
+      <div class="modal-body">
+        <pre><code id="modal-code-snippet">// Código fuente del componente</code></pre>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-sm btn-primary" id="modal-copy-btn">
+          <i class="ri-file-copy-line"></i> Copiar Código
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p><strong>Web08 Showcase Lab</strong> &bull; Tecnologías Web I &bull; 14 Librerías JavaScript Modernas</p>
+    <p style="margin-top:0.4rem;font-size:0.8rem;color:var(--text-dim);">Estructura optimizada: <code>fonts/</code>, <code>css/</code>, <code>js/</code>, <code>assets/</code></p>
+  </footer>
+
+  <!-- DEPENDENCIAS CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.12.0/validator.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.11/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.11/plugin/relativeTime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.11/locale/es.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+  <script src="https://unpkg.com/konva@9.3.6/konva.min.js"></script>
+
+  <!-- SCRIPTS LOCALES DE WEB08 -->
+  <script src="js/basic-demos.js"></script>
+  <script src="js/intermediate-demos.js"></script>
+  <script src="js/advanced-demos.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

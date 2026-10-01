@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sofia Valenzuela",
+    "rol": "Lead Architect",
+    "departamento": "Ingeniería Cloud",
+    "experiencia": 8,
+    "skills": ["Kubernetes", "TypeScript", "Go"],
+    "estado": "Activo",
+    "salario": 4850,
+    "ciudad": "Santiago",
+    "avatar": "assets/avatar1.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Carlos Mendoza",
+    "rol": "Frontend Specialist",
+    "departamento": "UI/UX & Web",
+    "experiencia": 5,
+    "skills": ["Vue", "React", "GSAP", "Tailwind"],
+    "estado": "Activo",
+    "salario": 3600,
+    "ciudad": "Buenos Aires",
+    "avatar": "assets/avatar2.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Elena Rostova",
+    "rol": "Data Scientist",
+    "departamento": "IA & Analítica",
+    "experiencia": 6,
+    "skills": ["Python", "D3.js", "PyTorch", "SQL"],
+    "estado": "Remoto",
+    "salario": 4200,
+    "ciudad": "Madrid",
+    "avatar": "assets/avatar3.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Mateo Silva",
+    "rol": "Game Developer",
+    "departamento": "Interactivos & 3D",
+    "experiencia": 4,
+    "skills": ["Phaser.js", "Konva.js", "WebGL"],
+    "estado": "Activo",
+    "salario": 3400,
+    "ciudad": "Lima",
+    "avatar": "assets/avatar1.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "Valentina Gómez",
+    "rol": "QA Automation Engineer",
+    "departamento": "Calidad & DevOps",
+    "experiencia": 5,
+    "skills": ["Playwright", "Jest", "Validator.js"],
+    "estado": "Vacaciones",
+    "salario": 3200,
+    "ciudad": "Bogotá",
+    "avatar": "assets/avatar2.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Andrés Becker",
+    "rol": "Backend Developer",
+    "departamento": "Ingeniería Cloud",
+    "experiencia": 7,
+    "skills": ["Node.js", "Axios", "GraphQL", "PostgreSQL"],
+    "estado": "Activo",
+    "salario": 4100,
+    "ciudad": "Ciudad de México",
+    "avatar": "assets/avatar3.svg"
+  },
+  {
+    "id": 7,
+    "nombre": "Lucía Morales",
+    "rol": "GIS Specialist",
+    "departamento": "Geodatos & Mapeo",
+    "experiencia": 4,
+    "skills": ["Leaflet", "GeoJSON", "Mapbox", "PostGIS"],
+    "estado": "Activo",
+    "salario": 3550,
+    "ciudad": "Montevideo",
+    "avatar": "assets/avatar1.svg"
+  },
+  {
+    "id": 8,
+    "nombre": "Joaquín Herrera",
+    "rol": "Creative Developer",
+    "departamento": "UI/UX & Web",
+    "experiencia": 6,
+    "skills": ["Anime.js", "Three.js", "AOS", "CSS3"],
+    "estado": "Remoto",
+    "salario": 3900,
+    "ciudad": "Valparaíso",
+    "avatar": "assets/avatar2.svg"
+  }
+]

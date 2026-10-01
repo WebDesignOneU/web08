@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Campus Tecnológico Central",
+    "tipo": "Hub de Innovación",
+    "lat": -33.4372,
+    "lng": -70.6506,
+    "ciudad": "Santiago",
+    "descripcion": "Sede principal de investigación e incubación digital.",
+    "color": "#6366f1"
+  },
+  {
+    "id": 2,
+    "nombre": "Data Center Puerto",
+    "tipo": "Infraestructura Cloud",
+    "lat": -33.0472,
+    "lng": -71.6127,
+    "ciudad": "Valparaíso",
+    "descripcion": "Nodo de conectividad submarina y cómputo de alto rendimiento.",
+    "color": "#06b6d4"
+  },
+  {
+    "id": 3,
+    "nombre": "Bio-Tech Lab Sur",
+    "tipo": "Laboratorio I+D",
+    "lat": -36.8270,
+    "lng": -73.0503,
+    "ciudad": "Concepción",
+    "descripcion": "Centro de modelamiento biomolecular y algoritmos genómicos.",
+    "color": "#10b981"
+  },
+  {
+    "id": 4,
+    "nombre": "Observatorio Astrodata",
+    "tipo": "Telescopios & Big Data",
+    "lat": -29.9027,
+    "lng": -71.2520,
+    "ciudad": "La Serena",
+    "descripcion": "Ingesta masiva de petabytes astronómicos con pipelines distribuidos.",
+    "color": "#f59e0b"
+  }
+]

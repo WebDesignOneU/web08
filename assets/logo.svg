@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="8" width="44" height="44" rx="12" fill="url(#logoGrad)" />
+  <polygon points="28,16 38,36 18,36" fill="#ffffff" opacity="0.9" />
+  <circle cx="28" cy="27" r="4" fill="#0f172a" />
+  <text x="62" y="32" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="-0.5">WEB<tspan fill="url(#logoGrad)">08</tspan></text>
+  <text x="62" y="46" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="500" fill="#94a3b8" letter-spacing="1.5">SHOWCASE LAB</text>
+</svg>

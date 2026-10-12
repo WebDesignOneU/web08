@@ -154,6 +154,37 @@ body.light-theme .toast {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
 }
 
+/* Flowbite Modal Light Theme */
+body.light-theme .modal-backdrop {
+  background: rgba(241, 245, 249, 0.9) !important;
+}
+
+body.light-theme .modal-backdrop.open {
+  opacity: 1;
+}
+
+body.light-theme .modal-card {
+  --bg-secondary: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .modal-header {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: #f8fafc;
+}
+
+body.light-theme .modal-body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light-theme .modal-footer {
+  border-top-color: rgba(0, 0, 0, 0.1);
+  background: #f8fafc;
+  color: #0f172a;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -898,18 +929,138 @@ body.light-theme select::-ms-expand {
   gap: 0.75rem;
 }
 
+/* Flowbite Tabs */
+.flowbite-tab-btn {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+.flowbite-tab-btn.active {
+  color: var(--primary);
+}
+
+.flowbite-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.flowbite-tab-btn.active::after {
+  width: 100%;
+}
+
+/* Tabs Light Theme */
+body.light-theme .flowbite-tab-btn {
+  color: var(--text-muted);
+}
+
+body.light-theme .flowbite-tab-btn.active {
+  color: var(--primary);
+}
+
+body.light-theme .flowbite-tab-btn.active::after {
+  background: var(--primary);
+}
+
+/* Tabs Dark Theme */
+body:not(.light-theme) .flowbite-tab-btn {
+  color: var(--text-muted);
+}
+
+body:not(.light-theme) .flowbite-tab-btn.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+body:not(.light-theme) .flowbite-tab-btn.active::after {
+  background: var(--primary);
+}
+
+/* Tabs Panes */
+.flowbite-tab-pane {
+  display: none;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.flowbite-tab-pane.active {
+  display: block;
+}
+
+/* Light Theme Panes */
+body.light-theme .flowbite-tab-pane {
+  color: var(--text-muted);
+}
+
+/* Dark Theme Panes */
+body:not(.light-theme) .flowbite-tab-pane {
+  color: var(--text-dim);
+}
+
 /* 12. D3.js Network Simulation */
 #d3-stage {
   width: 100%;
   height: 240px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
   border-radius: var(--radius-md);
   cursor: grab;
+  position: relative;
+  overflow: hidden;
+}
+
+#d3-stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 #d3-stage:active {
   cursor: grabbing;
 }
+
+body.light-theme #d3-stage {
+  background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+}
+
+body:not(.light-theme) #d3-stage {
+  background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+}
+
+body.light-theme #d3-stage::before {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.03) 0%, transparent 50%);
+}
+
+body:not(.light-theme) #d3-stage::before {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+}
+
+/* 12. D3.js Network Simulation already defined above */
 
 /* 13. Phaser.js Game Container */
 #phaser-game-container {

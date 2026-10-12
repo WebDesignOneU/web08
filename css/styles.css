@@ -62,6 +62,98 @@ body.light-theme {
   --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.04);
 }
 
+/* Light Theme Specific Overrides */
+body.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+body.light-theme .nav-link {
+  color: #1e293b;
+}
+
+body.light-theme .nav-link:hover, body.light-theme .nav-link.active {
+  color: #0f172a;
+}
+
+body.light-theme .filter-btn {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #1e293b;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .filter-btn:hover {
+  background: #f8fafc !important;
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+body.light-theme .filter-btn.active {
+  background: #6366f1 !important;
+  color: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.4);
+}
+
+body.light-theme .search-input {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0f172a;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .search-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+body.light-theme .stat-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+body.light-theme .stat-card:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+body.light-theme .card-lib {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-theme .card-lib:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(99, 102, 241, 0.2) !important;
+}
+
+body.light-theme .demo-box {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.light-theme .modal-card {
+  --bg-secondary: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+body.light-theme .modal-body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light-theme .footer {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #1e293b;
+}
+
+body.light-theme .toast {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -652,6 +744,41 @@ table.dataTable tbody td {
   height: 250px;
   border-radius: var(--radius-md);
   z-index: 1;
+}
+
+body.light-theme #leaflet-map {
+  background: #fff;
+}
+
+/* Leaflet light theme tiles without API key */
+body.light-theme .leaflet-tile {
+  background: #fff;
+}
+
+body.light-theme .leaflet-tile-loaded {
+  background: #f1f5f9;
+}
+
+/* Free OSM-style tile URL - no API key required */
+body.light-theme #leaflet-map .leaflet-tile {
+  filter: grayscale(0);
+}
+
+/* Select elements light theme */
+body.light-theme select {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  border-color: rgba(0, 0, 0, 0.1);
+  appearance: none;
+}
+
+body.light-theme select option {
+  background: #fff;
+  color: #0f172a;
+}
+
+body.light-theme select::-ms-expand {
+  display: none;
 }
 
 /* 7. GSAP Visualizer */

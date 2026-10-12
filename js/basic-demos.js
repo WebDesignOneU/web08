@@ -316,9 +316,9 @@ async function initLeafletDemo() {
   try {
     leafletMap = L.map('leaflet-map').setView([-33.4372, -70.6506], 5);
 
-    // TileLayer con estética moderna oscura (CartoDB DarkMatter)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    // TileLayer gratuito OpenStreetMap (sin API key requerida)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
       subdomains: 'abcd',
       maxZoom: 19
     }).addTo(leafletMap);
